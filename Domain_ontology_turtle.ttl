@@ -1,0 +1,341 @@
+@prefix : <http://www.semanticweb.org/valko/ontologies/2024/4/capability> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix capability: <http://www.semanticweb.org/valko/ontologies/2024/4/capability#> .
+@base <http://www.semanticweb.org/valko/ontologies/2024/4/capability> .
+
+<http://www.semanticweb.org/valko/ontologies/2024/4/capability> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#enables
+capability:enables rdf:type owl:ObjectProperty ;
+                   rdfs:domain capability:Leadership ;
+                   rdfs:range capability:Maintenance_System .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#realizes
+capability:realizes rdf:type owl:ObjectProperty ;
+                    rdfs:domain capability:System_of_Interest ;
+                    rdfs:range capability:Doctrine .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#requires_info
+capability:requires_info rdf:type owl:ObjectProperty ;
+                         rdfs:domain capability:Interoperability ;
+                         rdfs:range capability:System_of_Interest .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#utilizes
+capability:utilizes rdf:type owl:ObjectProperty ;
+                    rdfs:domain capability:Combined_Capability ;
+                    rdfs:range capability:Resource .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Communication_Electronic_Equipment
+capability:Communication_Electronic_Equipment rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain capability:System_of_Interest .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Configuration_Management
+capability:Configuration_Management rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain capability:Leadership .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Enterprise_Resource_Planning
+capability:Enterprise_Resource_Planning rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain capability:Leadership .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Ground_Vehicles
+capability:Ground_Vehicles rdf:type owl:DatatypeProperty ;
+                           rdfs:domain capability:System_of_Interest .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Maintenance_4.0
+capability:Maintenance_4.0 rdf:type owl:DatatypeProperty ;
+                           rdfs:domain capability:Doctrine .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Maintenance_Level
+capability:Maintenance_Level rdf:type owl:DatatypeProperty ;
+                             rdfs:domain capability:Doctrine .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Ordnance_Weapons_Missiles
+capability:Ordnance_Weapons_Missiles rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain capability:System_of_Interest .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Production
+capability:Production rdf:type owl:DatatypeProperty ;
+                      rdfs:domain capability:Personnel .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Realibility_Centered_Maintenance
+capability:Realibility_Centered_Maintenance rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain capability:Doctrine .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Requirements_from_Related_Stakeholders
+capability:Requirements_from_Related_Stakeholders rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain capability:Requirement .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Requirements_from_Related_Systems
+capability:Requirements_from_Related_Systems rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain capability:Interface .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Sea_Ships
+capability:Sea_Ships rdf:type owl:DatatypeProperty ;
+                     rdfs:domain capability:System_of_Interest .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Software
+capability:Software rdf:type owl:DatatypeProperty ;
+                    rdfs:domain capability:System_of_Interest .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Support_Equipment
+capability:Support_Equipment rdf:type owl:DatatypeProperty ;
+                             rdfs:domain capability:System_of_Interest .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Capability
+capability:Capability rdf:type owl:Class ;
+                      rdfs:subClassOf capability:Combined_Capability .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Combined_Capability
+capability:Combined_Capability rdf:type owl:Class ;
+                               rdfs:subClassOf capability:Resource .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Doctrine
+capability:Doctrine rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Facilities
+capability:Facilities rdf:type owl:Class ;
+                      rdfs:subClassOf capability:Maintenance_Unit .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Functional_Capability
+capability:Functional_Capability rdf:type owl:Class ;
+                                 rdfs:subClassOf capability:Maintenance_Unit .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Interface
+capability:Interface rdf:type owl:Class ;
+                     rdfs:subClassOf capability:Interoperability .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Interoperability
+capability:Interoperability rdf:type owl:Class ;
+                            rdfs:subClassOf capability:Doctrine .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Leadership
+capability:Leadership rdf:type owl:Class ;
+                      rdfs:subClassOf capability:System_of_Interest .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Maintenance_System
+capability:Maintenance_System rdf:type owl:Class ;
+                              rdfs:subClassOf capability:System_of_Interest .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Maintenance_Unit
+capability:Maintenance_Unit rdf:type owl:Class ;
+                            rdfs:subClassOf capability:System_of_Interest .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Material
+capability:Material rdf:type owl:Class ;
+                    rdfs:subClassOf capability:Maintenance_Unit .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Operation
+capability:Operation rdf:type owl:Class ;
+                     rdfs:subClassOf capability:Task .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Organization
+capability:Organization rdf:type owl:Class ;
+                        rdfs:subClassOf capability:Maintenance_System .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Personnel
+capability:Personnel rdf:type owl:Class ;
+                     rdfs:subClassOf capability:Maintenance_Unit .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Qualification
+capability:Qualification rdf:type owl:Class ;
+                         rdfs:subClassOf capability:Personnel .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Requirement
+capability:Requirement rdf:type owl:Class ;
+                       rdfs:subClassOf capability:Interoperability .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Resource
+capability:Resource rdf:type owl:Class ;
+                    rdfs:subClassOf capability:Maintenance_System .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#System_of_Interest
+capability:System_of_Interest rdf:type owl:Class ;
+                              rdfs:subClassOf capability:Doctrine .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Task
+capability:Task rdf:type owl:Class ;
+                rdfs:subClassOf capability:Functional_Capability .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Training
+capability:Training rdf:type owl:Class ;
+                    rdfs:subClassOf capability:Personnel .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Change_Filter
+capability:Change_Filter rdf:type owl:NamedIndividual ,
+                                  capability:Operation .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Check_Oil_Level
+capability:Check_Oil_Level rdf:type owl:NamedIndividual ,
+                                    capability:Operation .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Container_Truck
+capability:Container_Truck rdf:type owl:NamedIndividual ,
+                                    capability:Resource .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Depot_Repair
+capability:Depot_Repair rdf:type owl:NamedIndividual ,
+                                 capability:Maintenance_Unit ;
+                        capability:Maintenance_4.0 "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Drain_Oil
+capability:Drain_Oil rdf:type owl:NamedIndividual ,
+                              capability:Operation .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#EPA_ESD
+capability:EPA_ESD rdf:type owl:NamedIndividual ,
+                            capability:Requirement ;
+                   capability:Maintenance_4.0 "true"^^xsd:boolean ;
+                   capability:Production "YES" .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Fill_Oil
+capability:Fill_Oil rdf:type owl:NamedIndividual ,
+                             capability:Operation .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Forklift
+capability:Forklift rdf:type owl:NamedIndividual ,
+                             capability:Resource ;
+                    capability:Production "" .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Lifting
+capability:Lifting rdf:type owl:NamedIndividual ,
+                            capability:Capability ;
+                   capability:Support_Equipment 5 .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Maintenance_Space
+capability:Maintenance_Space rdf:type owl:NamedIndividual ,
+                                      capability:Requirement ;
+                             capability:Production "YES" .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Measuring
+capability:Measuring rdf:type owl:NamedIndividual ,
+                              capability:Capability ;
+                     capability:Communication_Electronic_Equipment "" ;
+                     capability:Maintenance_4.0 "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Moving
+capability:Moving rdf:type owl:NamedIndividual ,
+                           capability:Capability .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Oil_Change
+capability:Oil_Change rdf:type owl:NamedIndividual ,
+                               capability:Task .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Site_1
+capability:Site_1 rdf:type owl:NamedIndividual ,
+                           capability:Facilities .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Site_2
+capability:Site_2 rdf:type owl:NamedIndividual ,
+                           capability:Facilities .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Tempest
+capability:Tempest rdf:type owl:NamedIndividual ,
+                            capability:Requirement ;
+                   capability:Communication_Electronic_Equipment "" ;
+                   capability:Maintenance_4.0 "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Testing
+capability:Testing rdf:type owl:NamedIndividual ,
+                            capability:Combined_Capability ;
+                   capability:Maintenance_4.0 "true"^^xsd:boolean ;
+                   capability:Software "Linux" .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Transporting
+capability:Transporting rdf:type owl:NamedIndividual ,
+                                 capability:Combined_Capability ;
+                        capability:Support_Equipment 2 .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Valve_Repair
+capability:Valve_Repair rdf:type owl:NamedIndividual ,
+                                 capability:Functional_Capability .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Vehicle_Repair
+capability:Vehicle_Repair rdf:type owl:NamedIndividual ,
+                                   capability:Functional_Capability .
+
+
+###  http://www.semanticweb.org/valko/ontologies/2024/4/capability#Warehouse
+capability:Warehouse rdf:type owl:NamedIndividual ,
+                              capability:Requirement ;
+                     capability:Production "" .
+
+
+###  Generated by the OWL API (version 4.5.24.2023-01-14T21:28:32Z) https://github.com/owlcs/owlapi
